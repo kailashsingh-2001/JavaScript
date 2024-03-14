@@ -1,0 +1,5 @@
+console.log("kailash")
+console.log("singh")
+console.log("mango")
+console.log("intern")
+console.log("wipro")
