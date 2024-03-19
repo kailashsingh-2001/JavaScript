@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body> 
+    <div class="container">
+        <div class="inner-container">
+            <div class="input1">
+                <input type="text" id="userinput1" placeholder="enter any number">
+            </div>
+            <div class="selection1">
+                <select name="" id="selection">
+                   <option value="+">add</option>
+                   <option value="-">sub</option>
+                   <option value="*">multiply</option>
+                   <option value="/">divide</option>
+               </select>
+              
+           </div>
+            <div class="input2">
+                <input type="text" name="" id="userinput2" placeholder="enter any number">
+            </div>
+            <div class="button"> <button onclick="calculate();" id="btn">Click here for result</button></div>
+           
+           <div class="output">
+            <input type="text" id="display" placeholder="output">
+        
+        </div> 
+            
+        </div>
+    </div>
+    
+    
+
+
+
+    <script>
+       function calculate(){
+        var a = parseInt( document.getElementById("userinput1").value) ;
+         var b =parseInt( document.getElementById("userinput2").value);
+
+      var c = document.getElementById('selection').value;
+       if(c==='+'){
+        document.getElementById('display').value=  a + b;
+    }       
+    if(c==='-'){
+        document.getElementById('display').value=  a - b;
+    }
+    if(c==='*'){
+        document.getElementById('display').value=  a * b;
+
+    }
+    if(c==='/'){
+        documnet.getElementById('display').value= a / b;
+    }
+       } 
+     
+
+
+
+
+    </script>
+</body>
+</html>
