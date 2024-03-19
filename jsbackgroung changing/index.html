@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <h1><label for="Domain">Select Your Domain</label> </h1>
+            <select name="" id="Domain">
+                <option value="React">React</option>
+                <option value="Angular">Angular</option>
+                <option value="Typescript">Typescript</option>
+                <option value="Vue.JS">Vue.Js</option>
+                <option value="vite.Js">Vite.Js</option>
+            </select>
+            <div class="colour">
+                <input type="text" id="red"
+                    style="background-color: red; border-radius: 80%; width: 2%; border: none;cursor: pointer; margin-top:2vh;padding: 5px;">
+                <input type="text" id="yellow"
+                    style="background-color: yellow; border-radius: 80%; width: 2%; border: none;cursor: pointer; margin-top:2vh;padding: 5px;">
+                <input type="text" id="green"
+                    style="background-color: green; border-radius: 80%; width: 2%; border: none;cursor: pointer; margin-top:2vh;padding: 5px;">
+                <input type="text" id="blue"
+                    style="background-color: blue; border-radius: 80%; width: 2%; border: none;cursor: pointer; margin-top:2vh; padding: 5px;">
+                <input type="text" id="black"
+                    style="background-color: cadetblue; border-radius: 80%; width: 2%; border: none;cursor: pointer; margin-top:2vh;padding: 5px;">
+            </div>
+            <p id="content"></p> <!-- Changed to a paragraph element -->
+          <div class="btns">
+             <button class="grn" id="upper">Upper Case</button>
+             <button class="grn" id="lower">Lower Case</button>
+             <button class="grn" id="+">+</button>
+             <button class="grn" id="-">-</button>
+          </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            let dropdown = document.getElementById('Domain');
+            let content = document.getElementById('content');
+
+            dropdown.addEventListener('change', function () {
+                let selectedOption = dropdown.value;
+                if (selectedOption === 'React') {
+                    content.textContent = 'React (or React.js) is a free and open-source JavaScript library for building user interfaces. It allows you to create reusable components, like building blocks, to structure your webpages. Developed and maintained by Meta (formerly Facebook) and a large community, React offers a powerful approach to web development. At its core, React uses components, written with a combination of HTML-like JSX syntax and JavaScript, to define how different parts of your interface should look and behave. These components receive data through props and manage their internal state, which triggers re-renders when it changes.';
+                } if (selectedOption === 'Angular') {
+                    content.textContent = 'Angular, a powerful open-source framework from Google, empowers developers to create dynamic single-page web applications (SPAs). Imagine interactive web experiences that feel like native desktop applications - thats the magic of Angular.Built on TypeScript, a superset of JavaScript, Angular enforces type safety, catching errors early in the development process and leading to more robust code.The core of Angular revolves around components, reusable building blocks that encapsulate UI and functionality. These components leverage a declarative approach, where you describe what you want to display, and Angular takes care of the details.'
+                } if (selectedOption === 'Typescript') {
+                    content.textContent = 'Angular, a powerful open-source framework from Google, empowers developers to create dynamic single-page web applications (SPAs). Imagine interactive web experiences that feel like native desktop applications - thats the magic of Angular.Built on TypeScript, a superset of JavaScript that adds optional static typing, Angular enforces type safety. This catches errors early in the development process, leading to more robust and maintainable code. TypeScript provides clear definitions for variables and functions, making your code easier to understand for yourself and your teammates.The core of Angular revolves around components, reusable building blocks that encapsulate UI and functionality. These components leverage a declarative approach, where you describe what you want to display, and Angular takes care of the details.'
+                } if (selectedOption === 'Vue.JS') {
+                    content.textContent = 'Vue.js (pronounced "view") carves a niche as a progressive JavaScript framework for crafting user interfaces. It emphasizes simplicity and flexibility, making it a popular choice for projects of all sizes.At its core, Vue.js offers a data-driven approach. You define your UI using HTML templates, enhanced with special syntax to bind data. This creates a reactive system where changes in the data automatically update the DOM (Document Object Model), keeping your UI and data in sync.Vue.js shines in its progressive nature. You can use it as a small library to enhance existing HTML pages or scale it up for building complex single-page applications (SPAs). This versatility caters to developers with varying levels of experience and project needs.'
+                } if (selectedOption === 'vite.Js') {
+                    content.textContent = 'Vite.js stands out as a next-generation frontend build tool designed to significantly enhance the development experience for modern web applications. Heres a breakdown of its key features in under 40 linesLightning Speed: Vite prioritizes speed. It ditches traditional bundling and serves your source files directly, leveraging native ES modules. This translates to near-instantaneous server startup and blazing-fast Hot Module Replacement (HMR), keeping you in the development flow.Development Focus: Unlike some bundlers, Vite caters specifically to the development experience. It pre-bundles dependencies only once, using the super-fast esbuild tool, minimizing development server startup times. Source code, on the other hand, is served on-demand, ensuring changes reflect instantly in the browser.'
+                }
+            });
+        });
+        document.getElementById("red").addEventListener("click", function () {
+            document.body.style.backgroundColor = "red";
+        });
+        document.getElementById("yellow").addEventListener("click", function () {
+            document.body.style.backgroundColor = "yellow";
+        });
+        document.getElementById("green").addEventListener("click", function () {
+            document.body.style.backgroundColor = "green";
+        });
+        document.getElementById("blue").addEventListener("click", function () {
+            document.body.style.backgroundColor = "blue";
+        });
+        document.getElementById("black").addEventListener("click", function () {
+            document.body.style.backgroundColor = "cadetblue";
+        });
+        document.getElementById("upper").addEventListener("click",function(){
+            document.getElementById("content").style.textTransform = "uppercase";
+        });
+        document.getElementById("lower").addEventListener("click",function(){
+            document.getElementById("content").style.textTransform = "lowercase";
+        });
+        
+        //  increasing font size
+        let head = document.getElementById("content");
+        let i =0;
+        let myArray = ['17px','18px','20px','22px','24px','26px']
+        function increasefontsize(){
+            head.style.fontSize = myArray[i++];
+        }
+        let mybtn = document.getElementById("+");
+        mybtn.addEventListener("click",increasefontsize)
+        // decreasing the size
+        let fom = document.getElementById("content");
+        let j =0;
+        let myArr = ['26px','24px','22px','20px','18px','17px']
+        function Decreasefontsize(){
+            fom.style.fontSize = myArr[j++];
+        }
+        let mybt = document.getElementById("-");
+        mybt.addEventListener("click",Decreasefontsize)
+   </script>
+</body>
+
+</html>
