@@ -15,6 +15,7 @@
             </div>
             <div class="selection1">
                 <select name="" id="selection">
+                    <option value="#">none</option>
                    <option value="+">add</option>
                    <option value="-">sub</option>
                    <option value="*">multiply</option>
@@ -41,10 +42,10 @@
 
     <script>
        function calculate(){
-        var a = parseInt( document.getElementById("userinput1").value) ;
-         var b =parseInt( document.getElementById("userinput2").value);
+        let a = parseInt( document.getElementById("userinput1").value) ;
+         let b =parseInt( document.getElementById("userinput2").value);
 
-      var c = document.getElementById('selection').value;
+      let c = document.getElementById('selection').value;
        if(c==='+'){
         document.getElementById('display').value=  a + b;
     }       
