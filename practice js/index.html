@@ -5,17 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script>
-        "use strict";
-        alert(3+3);
-        console.log(3+3)
-        console.log("my name is kailash");
 
-        let name="kailash";
-        let age=18;
-        let isloggedin=false;
-        console.log(name, age, isloggedin);
+<body>
+    <div id="body" style="background-color: red; width:100%; height: 100vh;">
+    <select name="" id="demo">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+
+    <button id="btn">click</button>
+</div>
+    <script>
+        // "use strict";
+        // alert(3+3);
+        // console.log(3+3)
+        // console.log("my name is kailash");
+
+        // let name="kailash";
+        // let age=18;
+        // let isloggedin=false;
+        // console.log(name, age, isloggedin);
+    //   let a=document.getElementById("demo");
+    //   document.getElementById("btn");
+    //   btn.addEventListener("btn",function(){
+        // console.log(btn.value);
+    //   })
+//   document.getElementById('btn').onclick=function(){
+//     let a= document.getElementById('demo').innerText;
+//     // let b=document.getElementById('body');
+//     if(a.innerText == '1' || a.innerText == '5'){
+        
+//         let b=document.getElementById('body');
+//        b.style.backgroundColor = "green";
+       
+        
+//     }
+    document.getElementById('btn').onclick = function() {
+        let a = document.getElementById('demo').value;
+        if (a === '1' || a === '5') {
+            
+            document.getElementById("body").style.backgroundColor = "green";
+        }
+        else{
+            document.getElementById("body").style.backgroundColor = "blue";
+        }
+    }
+
+
+    //  else{
+    //    console.log(a.value=10)
+    //  }
+    
+    
+// /document.getElementById("btn").onclick = function(){
+//     let a = document.getElementById("demo");
+//     body.style.backgroundColor = "green";
+// }
+        
     </script>
 </body>
 </html>
