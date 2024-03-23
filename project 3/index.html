@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      body :active{
+        background-color: black;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -99,8 +102,11 @@
     </style>
   </head>
 
-  <body>
+  <body >
+    <button id="n">on</button>
+    
     <div class="container">
+     
         <div class="box">
             <div class="innercont1" >
                <textarea  class="textarea" id="text" cols="30" rows="10" placeholder=" "></textarea>
@@ -144,6 +150,26 @@
         area.style.fontSize=fontsize .value;
         input.style.fontSize=fontsize .value;
        }
+      //  let mode=document.getElementById('mode');
+
+      // // document.getElementById('n').onclick=function(){
+      // //     let body=document.getElementsByTagName('body');
+      // //     if(mode==='on'){
+      // //       body.style.backgroundColor="black";
+      // //     }
+      // //     else{
+      // //       body.style.backgroundColor="red"
+      // //     }
+
+      // // }
+  const n = document.getElementById("n");
+  const body = document.querySelector('body')
+  n.onclick=function(){
+    n.classList.n('active');
+    body.classList('active')
+
+  }
+
       
 
       

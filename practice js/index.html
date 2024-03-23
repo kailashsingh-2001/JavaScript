@@ -8,6 +8,7 @@
 
 <body>
     <div id="body" style="background-color: red; width:100%; height: 100vh;">
+        <input type="text" id="input" placeholder="enter your color">
     <select name="" id="demo">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -43,16 +44,16 @@
        
         
 //     }
-    document.getElementById('btn').onclick = function() {
-        let a = document.getElementById('demo').value;
-        if (a === '1' || a === '5') {
+    // document.getElementById('btn').onclick = function() {
+    //     let a = document.getElementById('demo').value;
+    //     if (a === '1' || a === '5') {
             
-            document.getElementById("body").style.backgroundColor = "green";
-        }
-        else{
-            document.getElementById("body").style.backgroundColor = "blue";
-        }
-    }
+    //         document.getElementById("body").style.backgroundColor = "green";
+    //     }
+    //     else{
+    //         document.getElementById("body").style.backgroundColor = "blue";
+    //     }
+    // }
 
 
     //  else{
@@ -64,6 +65,12 @@
 //     let a = document.getElementById("demo");
 //     body.style.backgroundColor = "green";
 // }
+
+ document.getElementById('btn').addEventListener('click',function(){
+     let a=document.getElementById("body");
+     let b=document.getElementById('input').value;
+     a.style.backgroundColor=b;
+ })
         
     </script>
 </body>
