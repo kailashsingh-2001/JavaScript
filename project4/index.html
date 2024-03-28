@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="innermain1">
+        <div class="inputs">
+          <input type="text" placeholder="enter url for of image" id="image" />
+          <input type="text" placeholder="Enter your Name" id="name" />
+          <input type="email" placeholder="Enter your Email" id="email" />
+          <input
+            type="text"
+            placeholder="Enter your Enter your Gradution degree"
+            id="degree"
+          />
+          <input
+            type="text"
+            placeholder="Enter your mobile number"
+            id="phonenumber"
+          />
+          <button class="btn" id="click">submit</button>
+        </div>
+      </div>
+      <div class="innermain2">
+        <div class="display">
+          <p id="imgage">
+            <img alt="not found" id="img" /></p>
+          <p id="namedisplay"></p>
+          <p id="emaildisplay"></p>
+          <p id="degreedisplay"></p>
+          <p id="phonedisplay"></p>
+          <button id="download">Download</button>
+        </div>
+      </div>
+    </main>
+    <script>
+     document.getElementById('click').onclick=function(){
+       let image=document.getElementById('image').value;
+        let name=document.getElementById('name').value;
+        let email=document.getElementById('email').value;
+        let degree=document.getElementById('degree').value;
+        let phone=document.getElementById('phonenumber').value;
+        let img=document.getElementById('img');
+        img.src=image;
+
+        
+        document.getElementById('namedisplay').innerHTML=name;
+        document.getElementById('emaildisplay').innerHTML=email;
+        document.getElementById('degreedisplay').innerHTML=degree;
+        document.getElementById('phonedisplay').innerHTML=phone;
+
+     }
+
+
+
+    </script>
+  </body>
+</html>
