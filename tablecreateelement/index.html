@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="innermain1">
+        <div class="inputs">
+          <input type="text" placeholder="serial number" id="serialno" />
+          <input type="text" placeholder="Enter your Name" id="name" />
+          <input type="email" placeholder="Enter your Email" id="email" />
+          <input
+            type="text"
+            placeholder="Enter your Enter your Gradution degree"
+            id="degree"
+          />
+          <input
+            type="text"
+            placeholder="Enter your mobile number"
+            id="phonenumber"
+          />
+          <button class="btn" id="click">submit</button>
+        </div>
+      </div>
+
+     
+      <div class="innermain2">
+        <table border="2px solid black" width="50%" id="table">
+          <tr>
+          <th>s.no</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gradution</th>
+          <th>Mobile</th>
+        </tr>
+          <tr>
+            
+            <td id="s.no"></td>
+            <td id="namedisplay" ></td>
+            <td id="emaildisplay"></td>
+            <td id="degreedisplay"></td>
+            <td id="phonedisplay"></td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </main>
+    <script>
+     
+     document.getElementById('click').onclick=function(){
+      let slno=document.getElementById('serialno').value;
+        let name=document.getElementById('name').value;
+        let email=document.getElementById('email').value;
+        let degree=document.getElementById('degree').value;
+        let phone=document.getElementById('phonenumber').value;
+       
+       
+
+        document.getElementById('s.no').innerHTML=slno;
+        document.getElementById('namedisplay').innerHTML=name;
+        document.getElementById('emaildisplay').innerHTML=email;
+        document.getElementById('degreedisplay').innerHTML=degree;
+        document.getElementById('phonedisplay').innerHTML=phone;
+         
+
+        let tr =document.createElement('tr');
+        let td1=document.createElement('td');
+        let td2=document.createElement('td');
+        let td3=document.createElement('td');
+        let td4=document.createElement('td');
+        let td5=document.createElement('td');
+        td1.innerHTML=slno;
+        td2.innerHTML=name;
+        td3.innerHTML=email;
+        td4.innerHTML=degree;
+        td5.innerHTML=phone;
+        
+
+        
+        
+
+
+     }
+
+    
+
+
+
+    
+
+
+
+    </script>
+  </body>
+</html>
