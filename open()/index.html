@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+         <div class="innercont">
+            <p>What is netflex</p>
+            <div class="btn">
+            <button id="click">+</button>
+            <button id="hidden">x</button>
+          </div>
+         </div>
+         <div class="lorem">
+         <p>
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+         </p>
+         <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+        </div>
+         <div  class="innercont">
+            <p>How much does netflix cost?</p>
+            <div class="btn">
+               <button id="click2">+</button>
+               <button id="hidden">x</button>
+             </div>
+         </div>
+         <div  class="lorem2">
+            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹649 to ₹149 a month. No extra costs, no contracts.</p>
+         </div>
+         <div  class="innercont">
+            <p>Where can I watch?</p>
+            <div class="btn">
+               <button id="click3">+</button>
+               <button id="hidden">x</button>
+             </div>
+         </div>
+         <div  class="lorem3">
+            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+         <p>You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+        </div>
+         <div  class="innercont">
+            <p>How do I cancel</p>
+            <div class="btn">
+               <button id="click4">+</button>
+               <button id="hidden">x</button>
+             </div>
+         </div>
+         <div  class="lorem4">
+            <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+         </div>
+         <div  class="innercont">
+            <p>What can I watch on Netflix?</p>
+            <div class="btn">
+               <button id="click5">+</button>
+               <button id="hidden">x</button>
+             </div>
+         </div>
+         <div  class="lorem5">
+            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+         </div>
+
+
+
+
+
+        </div>
+
+        
+        <script>
+         
+        document.getElementById('click').addEventListener('click',function(){
+            let a=document.querySelector(".lorem");
+            let hidden=document.querySelector('#hidden');
+            let plus=document.querySelector("#click");
+            plus.style.display="none";
+            hidden.style.display="block";
+
+            a.style.display="block";
+
+        })
+
+        document.getElementById('hidden').addEventListener('click',function(){
+            let a=document.querySelector(".lorem");
+            let hidden=document.querySelector('#hidden');
+            let plus=document.querySelector("#click");
+            plus.style.display="block";
+            hidden.style.display="none";
+
+            a.style.display="none";
+
+        })
+      //   document.getElementById('click2').addEventListener('click',function(){
+      //       let a=document.querySelector(".lorem2");
+      //       let b=document.querySelector(".lorem");
+      //       b.style.display="none";
+      //       a.style.display="block";
+
+      //   })
+      //   document.getElementById('click3').addEventListener('click',function(){
+      //       let a=document.querySelector(".lorem3");
+      //       let b=document.querySelector(".lorem2");
+      //       b.style.display="none";
+      //       a.style.display="block";
+
+      //   })
+      //   document.getElementById('click4').addEventListener('click',function(){
+      //       let a=document.querySelector(".lorem4");
+      //       let b=document.querySelector(".lorem3");
+      //       b.style.display="none";
+
+      //       a.style.display="block";
+
+      //   })
+      //   document.getElementById('click5').addEventListener('click',function(){
+      //       let a=document.querySelector(".lorem5");
+      //       let b=document.querySelector(".lorem4");
+      //       b.style.display="none";
+      //       a.style.display="block";
+
+      //   })
+
+
+
+        </script>
+</body>
+</html>
