@@ -12,7 +12,7 @@
             <p>What is netflex</p>
             <div class="btn">
             <button id="click">+</button>
-            <button id="hidden">x</button>
+            <button id="hidden"></button>
           </div>
          </div>
          <div class="lorem">
@@ -25,7 +25,7 @@
             <p>How much does netflix cost?</p>
             <div class="btn">
                <button id="click2">+</button>
-               <button id="hidden">x</button>
+               <button id="hidden"></button>
              </div>
          </div>
          <div  class="lorem2">
@@ -35,7 +35,7 @@
             <p>Where can I watch?</p>
             <div class="btn">
                <button id="click3">+</button>
-               <button id="hidden">x</button>
+               <button id="hidden"></button>
              </div>
          </div>
          <div  class="lorem3">
@@ -46,7 +46,7 @@
             <p>How do I cancel</p>
             <div class="btn">
                <button id="click4">+</button>
-               <button id="hidden">x</button>
+               <button id="hidden"></button>
              </div>
          </div>
          <div  class="lorem4">
@@ -56,7 +56,7 @@
             <p>What can I watch on Netflix?</p>
             <div class="btn">
                <button id="click5">+</button>
-               <button id="hidden">x</button>
+               <button id="hidden"></button>
              </div>
          </div>
          <div  class="lorem5">
@@ -72,56 +72,32 @@
         
         <script>
          
-        document.getElementById('click').addEventListener('click',function(){
-            let a=document.querySelector(".lorem");
-            let hidden=document.querySelector('#hidden');
-            let plus=document.querySelector("#click");
-            plus.style.display="none";
-            hidden.style.display="block";
+      
+      function toggleContent(buttonId, contentSelector) {
+    document.getElementById(buttonId).addEventListener('click', function() {
+        let content = document.querySelector(contentSelector);
+        let hiddenButton = content.parentElement.querySelector('#hidden');
+        let plusButton = content.parentElement.querySelector('button[id^="click"]');
+        
+        
+        if (content.style.display === "none") {
+            content.style.display = "block";
+            plusButton.style.display = "block";
+            hiddenButton.style.display = "block";
+        } else {
+            content.style.display = "none";
+            plusButton.style.display = "block";
+            hiddenButton.style.display = "none";
+        }
+    });
+}
 
-            a.style.display="block";
 
-        })
-
-        document.getElementById('hidden').addEventListener('click',function(){
-            let a=document.querySelector(".lorem");
-            let hidden=document.querySelector('#hidden');
-            let plus=document.querySelector("#click");
-            plus.style.display="block";
-            hidden.style.display="none";
-
-            a.style.display="none";
-
-        })
-      //   document.getElementById('click2').addEventListener('click',function(){
-      //       let a=document.querySelector(".lorem2");
-      //       let b=document.querySelector(".lorem");
-      //       b.style.display="none";
-      //       a.style.display="block";
-
-      //   })
-      //   document.getElementById('click3').addEventListener('click',function(){
-      //       let a=document.querySelector(".lorem3");
-      //       let b=document.querySelector(".lorem2");
-      //       b.style.display="none";
-      //       a.style.display="block";
-
-      //   })
-      //   document.getElementById('click4').addEventListener('click',function(){
-      //       let a=document.querySelector(".lorem4");
-      //       let b=document.querySelector(".lorem3");
-      //       b.style.display="none";
-
-      //       a.style.display="block";
-
-      //   })
-      //   document.getElementById('click5').addEventListener('click',function(){
-      //       let a=document.querySelector(".lorem5");
-      //       let b=document.querySelector(".lorem4");
-      //       b.style.display="none";
-      //       a.style.display="block";
-
-      //   })
+toggleContent('click', '.lorem');
+toggleContent('click2', '.lorem2');
+toggleContent('click3', '.lorem3');
+toggleContent('click4', '.lorem4');
+toggleContent('click5', '.lorem5');
 
 
 
