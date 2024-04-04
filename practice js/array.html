@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="enter">
+    <button id="btn1">insert</button>
+    <button id="btn2">delete</button>
+    <p id="display"></p>
+    <script>
+        let a=[];
+        document.querySelector("#btn1").addEventListener('click',function(){
+            let b=document.querySelector('#enter').value;
+            a.push(b);//push it insert the value
+            document.getElementById('display').innerHTML=a;
+
+        })
+        document.querySelector("#btn2").addEventListener('click',function(){
+            let b=document.querySelector('#enter').value;
+            a.pop(b);//delete the inserted value
+            document.getElementById('display').innerHTML=a;
+
+        })
+
+    </script>
+</body>
+</html>
