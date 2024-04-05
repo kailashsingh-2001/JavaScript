@@ -6,44 +6,115 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" id="input">
+    <button id="btn">submit</button>
+    <p id="display"></p>
     <script>
-        let obj1=[
-{
-    id:1,
-    name:'kailash',
-    age: 23,
-    email:'singkailash2001@gmail.com',
-    city:'jaipur'
 
+let object=[
+    {
+        id:1,
+         name:'kailash',
+         age: 18,
+        email:'singkailash2001@gmail.com',
+         city:'jaipur'
+
+    },
+    {
+        id:2,
+         name:'rahul',
+         age: 20,
+        email:'rahul2001@gmail.com',
+         city:'jaipur'
 
 },
-{
-    id:2,
-    name:'rakesh',
-    age: 26,
-    email:'rakesh@gmail.com',
-    city:'Nagaur'
-},
-{
-    id:3,
-    name:'mohan',
-    age: 25,
-    email:'mohan2001@gmail.com',
-    city:'delhi'
-},
-{
-id:4,
-    name:'Rahu;',
-    age: 24,
-    email:'rahul2001@gmail.com',
-    city:'pune'
-}
-];
-obj1.forEach((item)=>{
-    console.log(item.id,item.name,item.age,item.email,item.city);
+{       id:3,
+         name:'nikhil',
+         age: 17,
+        email:'nikhil@gmail.com',
+         city:'jaipur'
 
+},
+{      id:4,
+         name:'keshab',
+         age: 23,
+        email:'keshab@gmail.com',
+         city:'jaipur'
+
+},
+{       id:5,
+         name:'ranveer',
+         age: 16,
+        email:'ranveer@gmail.com',
+         city:'jaipur'
+
+},
+{       id:6,
+         name:'rohit',
+         age: 19,
+        email:'rohit2001@gmail.com',
+         city:'jaipur'
+
+},
+{         id:7,
+         name:'virat',
+         age: 15,
+        email:'virat@gmail.com',
+         city:'jaipur'
+
+},
+
+{         id:8,
+         name:'subhman gill',
+         age: 22,
+        email:'gill@gmail.com',
+         city:'jaipur'
+
+},
+{        id:9,
+         name:'dhoni',
+         age: 20,
+        email:'dhoni@gmail.com',
+         city:'jaipur'
+
+},
+{       
+        id:10,
+        name:'jaiswal',
+        age: 18,
+        email:'jaiswal@gmail.com',
+        city:'jaipur'
+
+},
+]
+
+document.querySelector("#btn").addEventListener('click',function(){
+    let a =document.querySelector('#input').value;
+   
+let data=object.filter((item)=>{
+    return item.age>a;     
+    }
+
+    
+)
+//  
+console.log(data);
 })
-console.log(obj1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
     
 </body>
