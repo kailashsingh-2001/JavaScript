@@ -42,8 +42,11 @@
 // console.log(arr[0]);
 
 let heroes =['ironman','spiderman','superman','thor','shaktiman'];
-for(let i=0;i<heroes.length;i++ ){
-    console.log(heroes);
+// for(let i=0;i<heroes.length;i++ ){
+//     console.log(heroes[i]);
+// }
+for(let i of heroes){
+    console.log(i.toUpperCase());
 }
 
 
