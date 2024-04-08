@@ -41,15 +41,24 @@
 // let arr=[95, 93, 95,67,56];
 // console.log(arr[0]);
 
-let heroes =['ironman','spiderman','superman','thor','shaktiman'];
+// let heroes =['ironman','spiderman','superman','thor','shaktiman'];
 // for(let i=0;i<heroes.length;i++ ){
 //     console.log(heroes[i]);
 // }
-for(let i of heroes){
-    console.log(i.toUpperCase());
+// for(let i of heroes){
+//     console.log(i.toUpperCase());
+// }
+
+// for a given array with marks of students [ 85, 97,44,37,76,60]find the average marks of the entire class.
+
+
+let marks =[ 85, 97,44, 37, 76, 60];
+let sum=0;
+for(let val of marks ){
+    sum+=val;
 }
-
-
+let avg=sum/marks.length;
+console.log(`${avg}`);
 
 
 
