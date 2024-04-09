@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input">
+    <!-- <input type="text" id="input">
     <button id="btn">submit</button>
-    <p id="display"></p>
+    <p id="display"></p> -->
     <script>
 
 let object=[
@@ -86,20 +86,26 @@ let object=[
         city:'jaipur'
 
 },
-]
+];
 
-document.querySelector("#btn").addEventListener('click',function(){
-    let a =document.querySelector('#input').value;
+// document.querySelector("#btn").addEventListener('click',function(){
+//     let a =document.querySelector('#input').value;
    
-let data=object.filter((item)=>{
-    return item.age>a;     
-    }
+// let data=object.filter((item)=>{
+//     return item.name==a;     
+//     }
 
     
-)
-//  
-console.log(data);
+// )
+// //  
+// console.log(data);
+// })
+
+let data_filter= object.map((item)=>{
+    return item.name;
 })
+console.log(data_filter);
+
 
 
 

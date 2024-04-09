@@ -52,14 +52,23 @@
 // for a given array with marks of students [ 85, 97,44,37,76,60]find the average marks of the entire class.
 
 
-let marks =[ 85, 97,44, 37, 76, 60];
-let sum=0;
-for(let val of marks ){
-    sum+=val;
-}
-let avg=sum/marks.length;
-console.log(`${avg}`);
+// let marks =[ 85, 97,44, 37, 76, 60];
+// let sum=0;
+// for(let val of marks ){
+//     sum+=val;
+// }
+// let avg=sum/marks.length;
+// console.log(`${avg}`);
+// q3 for a given array with prcws of 5 items -> [250, 645 ,300, 900, 50]
+// all items have an offer of 10% off on them change the array to store final price after applying offer.
+ let arr=[250, 645, 300,900, 50];
+ for( let i of arr     ){
+    offer =i/10;
 
+   i=i-offer;
+ } 
+ console.log(i);
+ 
 
 
 
