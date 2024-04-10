@@ -1,4 +1,4 @@
-//Map the array to get an array of user names
+// Map the array to get an array of objects containing user names and their total order amounts.
 const complexData = [
     {
       id: 1,
@@ -29,9 +29,8 @@ const complexData = [
       ],
     },
   ];
-
-      
-   let data=complexData.map((item)=>{
-    return item.name;
-   })
-   console.log(data);
+    let data= complexData.map((item)=>{
+       
+        return  item.name;
+    })
+    console.log(data);

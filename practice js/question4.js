@@ -1,76 +1,38 @@
 //Map the array to get an array of order IDs.
-let obj =[
+const complexData = [
     {
-        id :1,
-        username: "rahul",
-        age: 24,
-        email : "rahul@gmail.com",
-        city: 'USA',
-        order:{
-            amount:30,
-
-        },
-        orderid:[ 1234 , 45454 , 56565 , 78478]
+      id: 1,
+      name: "John Doe",
+      age: 30,
+      address: {
+        street: "123 Main St",
+        city: "Anytown",
+        country: "USA",
+      },
+      orders: [
+        { orderId: "A123", amount: 50.75, status: "completed" },
+        { orderId: "B456", amount: 30.25, status: "pending" },
+      ],
     },
-    
-    { 
-        id :2,
-        username: "mohan",
-        age: 26,
-        email : "mohan@gmail.com",
-        city: 'dubai',
-        order:{
-            amount:20,
-
-        },
-        orderid:[ 1234 , 45454 , 56565 , 78478]
-
-        
+    {
+      id: 2,
+      name: "Jane Smith",
+      age: 25,
+      address: {
+        street: "456 Oak St",
+        city: "Othercity",
+        country: "USA",
+      },
+      orders: [
+        { orderId: "C789", amount: 100.5, status: "completed" },
+        { orderId: "D012", amount: 75.2, status: "completed" },
+      ],
     },
-       
-    { 
-        id :3,
-        username: "rohit",
-        age: 23,
-        email : "rohit@gmail.com",
-        city: 'singapur',
-        order:{
-            amount:60,
+  ];
+let data=complexData.map((item)=>{
+ 
 
-        },
-        orderid:[ 1234 , 45454 , 56565 , 78478]
-    },
-       
-    { 
-        id :4,
-        username: "mohit",
-        age: 27,
-        email : "mohit@gmail.com",
-        city: 'newzealand',
-        order:{
-            amount:70,
-
-        },
-        orderid:[ 1234 , 45454 , 56565 , 78478]
-    },
-       
-    { 
-        id :5,
-        username: "rohan",
-        age: 27,
-        email : "rohan@gmail.com",
-        city: 'nepal',
-        order:{
-            amount:80,
-
-        },
-        orderid:[ 1234 , 45454 , 56565 , 78478]
-    },
-       
-   
-    
-]
-let data=obj.map((item)=>{
-    return item.orderid;
+    return (item.orders.orderId) ;
+    // console.log(item.orders.orderId);
 })
 console.log(data);
