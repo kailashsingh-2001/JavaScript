@@ -1,4 +1,6 @@
-//Map the array to get an array of order IDs.
+// Filter users who live in the 'USA' and have at least one order with an amount greater than 50.
+
+
 const complexData = [
     {
       id: 1,
@@ -29,11 +31,13 @@ const complexData = [
       ],
     },
   ];
+
+  let data=complexData.map((item)=>{
+    return  item.address.country.filter((i)=>{
+        return i.orders.amount>50;
+    })
+    
     
 
-  let data=complexData.flatMap((item)=>{
-    return item.orders.map((i)=>{
-        return i.orderId;
-    })
   })
   console.log(data);

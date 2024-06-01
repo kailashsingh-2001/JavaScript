@@ -1,4 +1,6 @@
-//Map the array to get an array of order IDs.
+//Filter orders with an amount between 30 and 70.
+
+
 const complexData = [
     {
       id: 1,
@@ -29,11 +31,11 @@ const complexData = [
       ],
     },
   ];
-    
 
-  let data=complexData.flatMap((item)=>{
-    return item.orders.map((i)=>{
-        return i.orderId;
+
+  let data = complexData.map((item)=>{
+    return item.orders.filter((i)=>{
+        return i.amount >30 && i.amount <70;
     })
   })
-  console.log(data);
+console.log(data);

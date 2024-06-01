@@ -34,7 +34,19 @@ const complexData = [
 
 
 
-  let data=complexData.filter((item)=>{
-    return item.orders[0,1].status=="pending";
-})
+//   let data=complexData.map((item)=>{
+ 
+
+//     return item.orders.filter((d)=>{
+//         return  some(e){e.status == 'pending';
+//       } 
+//     });
+//     // console.log(item.orders.orderId);
+// })
+// console.log(data);
+
+const data = complexData.filter(item => {
+  return item.orders.some(i => i.status === 'pending');
+});
+
 console.log(data);

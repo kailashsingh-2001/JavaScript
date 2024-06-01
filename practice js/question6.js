@@ -29,8 +29,14 @@ const complexData = [
       ],
     },
   ];
-    let data= complexData.map((item)=>{
-       
-        return  item.name;
-    })
-    console.log(data);
+ let data= complexData.map((item)=>{
+        let totalamount = item.orders.reduce((acc,order)=>acc + order.amount,0)
+        return { name: item.name, data: totalamount };
+     })
+        
+ 
+ console.log(data);
+
+
+ 
+

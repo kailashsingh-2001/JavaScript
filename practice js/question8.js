@@ -1,4 +1,4 @@
-//Map the array to get an array of order IDs.
+// Map the array to get an array of objects containing user names and their completed order IDs.
 const complexData = [
     {
       id: 1,
@@ -29,11 +29,10 @@ const complexData = [
       ],
     },
   ];
-    
+  let data = complexData.map(user => {
+    let d = user.orders.filter(order => order.status === 'completed');
+ let c = d.map(order => order.orderId);
+    return { name: user.name, completedOrderIDs: c };
+});
 
-  let data=complexData.flatMap((item)=>{
-    return item.orders.map((i)=>{
-        return i.orderId;
-    })
-  })
-  console.log(data);
+console.log(data);
