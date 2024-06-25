@@ -1,0 +1,263 @@
+what kind of language is javascript?
+javascript is a high level programming , primarily javascript is used for frontend to make wen pages dynamic.
+javascript is a scripting language it is not compiled, it is interpreted by the crowser of javascript is a dynamically typed language, it means you don't need to declare the data type,
+javacript is a multiparadigm language it supports object oriented imperative and functional.
+javascript is a client-side language, it runs on the client side (browser)
+
+
+//web development it follows an architecture that is called as mvc,
+m==.model
+v==view
+c== controller
+
+
+client side==> the view part is called as clientside (browser side)
+
+what javascript will going to do?
+initially html has no programming features, just a structural design now using javascript we can able to manipulate the html dom.
+
+html dom 
+
+
+javascript is a simple programming language 
+topics in any programming language
+1.variables
+2.data types
+3.how to declare a variables.
+4.functions.
+5.array.
+6.classes and objects
+
+html dom event driven architecture kisi reason se dom ko manipulate karunga
+//button click, mouse hover, dynamic functionalities
+//on website chizo mai changes karna
+//javascript is used for creating dynamic web pages web, applications, mobile applications desktop applications
+
+website and webapplictions
+//website:static website, dynamic website single ended 
+blog website
+webapplictaion: multi user, multi ended, interactive WhatsApp 
+ vanilla js
+
+//javascript is 2017==>node.js
+
+what is difference between js and node.js
+python or pip
+windows or command prompt
+Linux or terminal
+java or jdk
+ c++ or mingw
+
+
+node.js is the runtime environment that helps javascript to run on the system.
+system:is nothing but my computer desktop, operating rating system (windows, Linux,ubuntu,)
+server-side:system-side is called as server side,
+node js is used for creating server-side applications, desktop applications, mobile applications
+
+js==> version
+node.js=>version=>server-side
+//node.js provides runtime environment with addition of non-blocking 
+
+js=>client-side
+vanilla js, react.js, angularjs
+
+
+
+
+
+
+js=>handling both (client and server ) through server is next.js
+
+//next.js is a framework that helps to create server-side rendered react applictions.
+
+//server ek device hai, ya fir ek terminal ya fir ek operating system hai, ya fir ek needful resource provider hai jo 24*7 anytime resource provide karne ke liye ready ho aur kisi bhi region se kisi temperature par resource milti rahega
+
+
+api : application programming interface, communication between client and server,
+api: ek interface hai jo client aur server ke beech communication karne ke liye use kiya jata hai
+api:ek messenger hai jo client ki request ko server tak pahunchta hai aur server ki response ko slient tak pahunchatta hai 
+
+ ek protocol hai jo client aur server ke beech communication karne kek liye use 
+ ek ser of rules hai jo client aur server ke beech communication karne ke liye use karte hai 
+
+api are created in server side
+ are consumed in clinet side
+ jsom format mai data from client to server and server to client exchange hoti 
+
+http protocol
+
+//status code are the signal of comfirmation it consist 
+1.
+2.
+3.redirection
+4.client error
+5.server error
+
+ 
+yeh sab kuch from frontendto backend jis language mai ho rahi hogi  that is javascript
+
+ek jagah ya fir distribute kar do
+ system design ke topics
+1.monolithic architecture : single folder, single file
+2.distributive architecture:components , folders
+
+that process is called as hosting
+
+aws, google cloud platform:virtual machine jisme operating system 
+
+
+  //24 june//
+  types of  variables declaration
+let 
+const 
+var
+let and const are block scoped 
+var is function scoped ka matlab hai ki pure function 
+yaha fucntion scope ka matlab hai ki pure function mai variable ki scope rahegi usme agar if bhi aa jaye go us if block mai bhi variable defined hoga
+//example
+{
+    let a=10;
+    console.log(a);
+    //here a is not defined outside the block
+
+}
+{
+    var b= 20;
+    console.log(b);
+}
+console.log(b);
+//here b is defined outside the block because var is function scoped 
+// kiski na kisi ne ek function ko hide kiya hua hai 
+//function lower level meaning hota hai stack
+//two stack are the ek hota hai main stack ek hota hai side stack
+
+//main stack mai humne ek function define kiya hai
+//main pura body hai usme side stack side function khelata hai//
+
+
+//hoisting:udhari ka concept 
+//javacript mai humne ek variable declare kiya hai to us variable ko upar
+le jata
+//variable ko declare kiya bina usko use karlena hi hoisting ka concept hai
+//example
+console.log(c)
+var c=30;
+
+a();//fucntion hoisting
+var a=()=>{
+    console.log(b)
+}
+var b=20;
+//3 types of function calling  in javascript 
+1//function declaration
+2//immdediately invoked fucntion expressiong (IIFE)
+3.
+4.arrow function
+5.function constructor
+6.annonynoumous function
+
+1// function declaration or named function
+function add(a,b){
+    return a+b;
+
+}
+console.log(add(10,20));//30
+
+2.function expression 
+a) using var
+var add=function(a,b){
+    return a+b;
+};
+add();//add is refrence to that annonynoumous function
+
+//b. using let 
+//let add=fucntion(a,b){
+    return a+b;
+
+}
+add(3,5)
+
+/c/ const add= function(a,b){
+    returna+b;
+}
+add(3,5);
+//const cannot be redeclare or reassign
+
+
+3//arrow function
+a)/using var
+var add=(a,b)=>
+{
+return a+b;
+}
+add(3,5);
+
+b)/using let
+let add=(a,b)=>
+{
+return a+b;
+}
+add(3,5);
+
+c)/using const
+const add=(a,b)=>
+{
+return a+b;
+}
+add(3,5);
+  //3 immdediately invoked function expression (IIFE)
+  a)using var
+  var result =(function (a,b){
+    return a+b;
+  })(3,5);
+  console.log(result);
+
+  b// using let
+  let result=((a,b)=>{
+    return a+b;
+
+  })(3,5);
+  console.log(result);
+
+  c//using const
+  const result=(function(a,b){
+    return a+b;
+
+  })(3,5)
+
+
+  //4.oops 
+
+   what is function constructor?
+   what is constructor?
+   ==>a constructor is a special method that is automatically called when an object is created from
+   a class.
+   //to initialise the object
+//default constructor,paramterised constructor,copy constructor
+
+function add(a,b){
+    this.a=a;
+    this.b=b;
+    this.result=function(){
+        return this.a+this.b;
+    };
+}
+add(3,5)
+//default fucntion constructor
+
+function sub(a,b){
+    this.a=3;
+    this.b=2;
+    this.result=function(){
+        return this.a-this.b;
+    };
+}
+sub (3,5);
+
+
+
+
+
+
+
+
