@@ -1,3 +1,5 @@
+<==21 june==>
+
 what kind of language is javascript?
 javascript is a high level programming , primarily javascript is used for frontend to make wen pages dynamic.
 javascript is a scripting language it is not compiled, it is interpreted by the crowser of javascript is a dynamically typed language, it means you don't need to declare the data type,
@@ -106,8 +108,8 @@ that process is called as hosting
 aws, google cloud platform:virtual machine jisme operating system 
 
 
-  //24 june//
-  types of  variables declaration
+  <==//24 june//==>
+Types of  variables declaration
 let 
 const 
 var
@@ -253,6 +255,53 @@ function sub(a,b){
     };
 }
 sub (3,5);
+
+function evenodd(a)
+{
+ this.a=a;
+ this.result=()=>{
+    if(this.a%2==0){
+        return "even";
+    }
+    else{
+        return "odd"
+    }
+ };
+}
+evenodd(5);
+
+   <==//25 june//==>
+   const maximum = (a,b,c,d,e)=>{
+    let max =a;
+    let p =3;
+
+   }
+   let a =5,
+   b=6,
+   c=7,
+   d=2,
+   e=3;
+   //
+ const sumof2=()==>{
+    let a=5,b=6;
+    return a*b;
+ }
+
+  const main =() ==>{
+    let a=3,b=6,c=9;
+    let avg=(a+b+c)/3;
+    if(avg>40){
+        sumof2();
+    }
+
+  }
+    
+   
+
+
+
+   
+
 
 
 
