@@ -40,7 +40,7 @@ console.log(result);
 
    
 // 5. u// Define a parameterized function constructor for calculating factorial
-const Factorial = new Function('n', `
+const Factorial = new Function(`'n',
    if (n === 0 || n === 1) {
        return 1;
    } else {
