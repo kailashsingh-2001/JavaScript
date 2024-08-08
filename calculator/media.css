@@ -1,15 +1,17 @@
 @media screen and (max-width: 900px) {
-  .button {
-    /* flex-wrap: nowrap; */
+    .button {
+      /* flex-wrap: nowrap; */
+    }
   }
-}
-/* mobile device */
-@media screen and (max-width: 480px) {
-  .inner-container {
-    width: 100%;
+  /* mobile device */
+  @media screen and (max-width: 480px) {
+    .inner-container {
+      width: 100%;
+      height: 100%;
+    }
   }
-}
-
-/* tablet */
-@media screen and(max-width:768px) {
-}
+  
+  /* tablet */
+  @media screen and(max-width:768px) {
+  }
+  

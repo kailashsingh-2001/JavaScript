@@ -29,11 +29,10 @@ const complexData = [
       ],
     },
   ];
-    
+let data=complexData.map((item)=>{
+ 
 
-  let data=complexData.flatMap((item)=>{
-    return item.orders.map((i)=>{
-        return i.orderId;
-    })
-  })
-  console.log(data);
+    return (item.orders.orderId) ;
+    // console.log(item.orders.orderId);
+})
+console.log(data);
